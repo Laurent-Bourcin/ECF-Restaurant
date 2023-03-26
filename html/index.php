@@ -23,7 +23,10 @@
     <!-- reservation buton -->
     <div class="row">
         <div class="col-12">
-            <button class="btn"> réserver </button>
+            <button class="btn" 
+                    onclick="window.location.href='./reservation.php'"> 
+                    Réserver 
+            </button>
         </div>
     </div>
 </main>
