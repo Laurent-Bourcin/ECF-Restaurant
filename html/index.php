@@ -9,7 +9,11 @@
 </head>
 <body>
 
+<!-- header -->
 <?php include 'header.php'; ?> 
+
+<!-- footer -->
+<?php include 'footer.php'; ?>
 
 </body>
 <script src="../Bootstrap/js/bootstrap.bundle.js"></script>
