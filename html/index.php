@@ -12,22 +12,21 @@
 <!-- header -->
 <?php include 'header.php'; ?> 
 
-<!-- carousel -->
-<section class="container-fluid">
-    <div class="row">
+<main class="container-fluid">
+    <!-- carousel -->
+    <section class="row">
         <div class="col-12">
             <span> Galerie d'image </span>
         </div>
-    </div>
-</section>
+    </section>
 
-<div class="container-fluid">
+    <!-- reservation buton -->
     <div class="row">
         <div class="col-12">
             <button class="btn"> réserver </button>
         </div>
     </div>
-</div>
+</main>
 
 <!-- footer -->
 <?php include 'footer.php'; ?>

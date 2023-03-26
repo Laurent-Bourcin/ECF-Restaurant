@@ -16,11 +16,11 @@
     <!-- Navbar -->
     <div class="row">
         <div class="col-3">
-            <button class="btn"> Accueil </button>
+            <button class="btn" onclick="window.location.href='./index.php'"> Accueil </button>
         </div>
 
         <div class="col-3">
-            <button class="btn"> Carte </button>
+            <button class="btn" onclick="window.location.href='./food_list.php'"> Carte </button>
         </div>
 
         <div class="col-3">
