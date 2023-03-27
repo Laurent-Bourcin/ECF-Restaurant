@@ -24,7 +24,7 @@
         </div>
 
         <div class="col-3">
-            <button class="btn"> Menus </button>
+            <button class="btn" onclick="window.location.href='./menus.php'"> Menus </button>
         </div>
 
         <div class="col-3">
