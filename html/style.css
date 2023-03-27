@@ -1,6 +1,5 @@
-/* bck = background and plt=palette */
-
-/* Background */
+/* Background
+bck = background and plt=palette */
 .bcg_plt_beige {
     background-color: #EBBD85;
 }
@@ -20,4 +19,15 @@
 
 .plt_beige {
     color: #EBBD85;
+}
+
+/* font-family
+ff=font-family */
+@font-face {
+    font-family: "arabic";
+    src: url("../Font/Arabic\ Typesetting/arabic_typesetting.ttf");
+}
+.ff_arabic {
+    font-family: "arabic";
+    font-size: 1.5em;
 }

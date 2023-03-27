@@ -13,18 +13,55 @@
 <!-- header -->
 <?php include 'header.php'; ?> 
 
-<main class="container-fluid">
+<main class="container-fluid mt-5">
     <!-- carousel -->
     <section class="row">
         <div class="col-12">
-            <span> Galerie d'image </span>
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img 
+                            src="../Images/carousel/fondue.png" 
+                            class="d-block w-100" 
+                            alt="Fondue">
+                    </div>
+                    <div class="carousel-item">
+                        <img 
+                            src="../Images/carousel/raclette.png" 
+                            class="d-block w-100" 
+                            alt="Raclette">
+                    </div>
+                    <div class="carousel-item">
+                        <img 
+                            src="../Images/carousel/tartiflette.png" 
+                            class="d-block w-100" 
+                            alt="Tartiflette">
+                    </div>
+                </div>
+                <button 
+                    class="carousel-control-prev" 
+                    type="button" 
+                    data-bs-target="#carousel" 
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button 
+                    class="carousel-control-next" 
+                    type="button" 
+                    data-bs-target="#carousel" 
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </section>
 
     <!-- reservation buton -->
-    <div class="row">
-        <div class="col-12">
-            <button class="btn" 
+    <div class="row mt-2 mb-5">
+        <div class="col-12 text-center">
+            <button class="btn bcg_plt_beige plt_golden" 
                     onclick="window.location.href='./reservation.php'"> 
                     Réserver 
             </button>

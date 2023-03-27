@@ -1,49 +1,51 @@
 <header class="container-fluid">
     <!-- Connect buton -->
-    <div class="row">
-        <div class="col-1 offset-11 align-self-end">
-            <button class="btn bcg_plt_beige mt-1 plt_golden"> connexion </button>
+    <div class="row mb-3">
+        <div class="col-12 text-end">
+            <button class="btn btn-sm bcg_plt_beige mt-1 plt_golden">
+                <span class="ff_arabic"> Connexion </span>
+            </button>
         </div>
     </div>
     
     <!-- Logo Le Quai Antique-->
     <div class="row">
         <div class="col-12 text-center mb-5">
-            <img src="../Images/Logo.png" alt="Logo Le Quai Antique">
+            <img src="../Images/logos/Logo.png" alt="Logo Le Quai Antique" class="img-fluid">
         </div>
     </div>
 
     <!-- Navbar -->
-    <div class="row text-center">
-        <div class="col-3">
+    <div class="row text-center mt-md-3">
+        <div class="col mb-1">
             <button 
-                class="btn bcg_plt_golden px-5" 
+                class="btn btn-sm bcg_plt_golden px-md-5" 
                 onclick="window.location.href='./index.php'">
-                Accueil 
+                <span class="ff_arabic"> Accueil </span>
             </button>
         </div>
 
-        <div class="col-3">
+        <div class="col">
             <button 
-                class="btn bcg_plt_golden px-5" 
+                class="btn btn-sm bcg_plt_golden px-md-5" 
                 onclick="window.location.href='./food_list.php'">
-                Carte
+                <span class="ff_arabic"> Carte </span>
             </button>
         </div>
 
-        <div class="col-3">
+        <div class="col">
             <button 
-                class="btn bcg_plt_golden px-5" 
+                class="btn btn-sm bcg_plt_golden px-md-5" 
                 onclick="window.location.href='./menus.php'">
-                Menus 
+                <span class="ff_arabic"> Menus </span>
             </button>
         </div>
 
-        <div class="col-3">
+        <div class="col">
             <button 
-                class="btn bcg_plt_golden px-5" 
+                class="btn btn-sm bcg_plt_golden px-md-5" 
                 onclick="window.location.href='./hours.php'">
-                Horaires
+                <span class="ff_arabic"> Horaires </span>
             </button>
         </div>
     </div>
