@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
-    <title>ECF_Restaurant</title>
+    <title>ECF_Restaurant_admin</title>
 </head>
 <body>
 
@@ -15,8 +15,13 @@
 <main class="container-fluid">
     <!-- carousel -->
     <section class="row">
-        <div class="col-12">
+        <div class="col-10">
             <span> Galerie d'image </span>
+        </div>
+        <div class="col-2">
+            <a href="#"><img src="../Images/icon_add.png"></a>
+            <a href="#"><img src="../Images/icon_garbage.png"></a>
+            <a href="#"><img src="../Images/icon_modify.png"></a>
         </div>
     </section>
 
@@ -32,7 +37,7 @@
 </main>
 
 <!-- test -->
-<button onclick="window.location.href='./admin_index.php'"> TEST </button>
+<button onclick="window.location.href='./admin_hours.php'"> TEST </button>
 
 <!-- footer -->
 <?php include 'footer.php'; ?>
