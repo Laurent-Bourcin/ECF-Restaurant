@@ -31,6 +31,9 @@
     </div>
 </main>
 
+<!-- test -->
+<button onclick="window.location.href='./admin_food_list.php'"> TEST </button>
+
 <!-- footer -->
 <?php include 'footer.php'; ?>
 
