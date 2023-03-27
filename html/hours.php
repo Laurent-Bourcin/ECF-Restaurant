@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
-    <title>ECF_Restaurant_Food_List</title>
+    <title>ECF_Restaurant_Hours</title>
 </head>
 <body>
 
@@ -13,59 +13,49 @@
 <?php include 'header.php'; ?> 
 
 <main class="container-fluid">
-    <!-- title -->
+<!-- title -->
     <div class="row">
         <div class="col-12">
-            <h1> Carte </h1>
+            <h1> Hours </h1>
         </div>
     </div>
 
-    <!-- food_list -->
+    <!-- hours list -->
     <section class="row">
         <div class="col-12">
-            <!-- entrees -->
+        <!-- week -->
             <div class="row">
                 <div class="col-10">
-                    <h2> Entrées </h2>
+                    <h2> Lundi au Vendredi </h2>
                     <table>
                         <tr>
-                            <td>titre</td>
-                            <td>description</td>
-                            <td>prix</td>
+                            <td> Midi </td>
+                            <td> 12h - 14h30 </td>
+                        </tr>
+                        <tr>
+                            <td> Soir </td>
+                            <td> 19h30 - 22h30 </td>
                         </tr>
                     </table>
                 </div>
             </div>
 
-            <!-- dishes -->
+            <!-- week-end -->
             <div class="row">
                 <div class="col-10">
-                    <h2> Plats </h2>
+                    <h2> Samedi </h2>
                     <table>
                         <tr>
-                            <td>titre</td>
-                            <td>description</td>
-                            <td>prix</td>
+                            <td> Midi </td>
+                            <td> 12h - 14h30 </td>
+                        </tr>
+                        <tr>
+                            <td> Soir </td>
+                            <td> 19h00 - 23h00 </td>
                         </tr>
                     </table>
                 </div>
             </div>
-
-            <!-- desserts -->
-            <div class="row">
-                <div class="col-10">
-                    <h2> Desserts </h2>
-                    <table>
-                        <tr>
-                            <td>titre</td>
-                            <td>description</td>
-                            <td>prix</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-
     </section>
 </main>
 

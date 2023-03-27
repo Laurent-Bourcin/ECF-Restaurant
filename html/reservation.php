@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
-    <title>ECF - Restaurant</title>
+    <title>ECF_Restaurant_Reservation</title>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
         </div>
         <div class="col-6">
             <select name="cutlery" id="cutlery_select">
-                <option value=""> --Choisir le nombre de couverts-- </option>
+                <option value=""> --Sélectionner le nombre de couverts-- </option>
             </select>
         </div>
     </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="col-6">
             <select name="date" id="date_select">
-                <option value=""> --Choisir une date-- </option>
+                <option value=""> --Sélectionner une date-- </option>
             </select>
         </div>
     </div>
@@ -47,7 +47,7 @@
         </div>
         <div class="col-6">
             <select name="hour" id="hour_select">
-                <option value=""> --Choisir une horaire-- </option>
+                <option value=""> --Sélectionner une horaire-- </option>
             </select>
         </div>
     </div>
@@ -59,7 +59,7 @@
         </div>
         <div class="col-6">
             <select name="alergy" id="alergy_select">
-                <option value=""> --Choisir une horaire-- </option>
+                <option value=""> --Sélectionner alergie(s)-- </option>
             </select>
         </div>
     </div>

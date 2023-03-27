@@ -28,7 +28,7 @@
         </div>
 
         <div class="col-3">
-            <button class="btn"> Horaires </button>
+            <button class="btn" onclick="window.location.href='./hours.php'"> Horaires </button>
         </div>
     </div>
 </header>
