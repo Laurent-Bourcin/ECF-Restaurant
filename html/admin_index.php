@@ -36,9 +36,6 @@
     </div>
 </main>
 
-<!-- test -->
-<button onclick="window.location.href='./admin_hours.php'"> TEST </button>
-
 <!-- footer -->
 <?php include 'footer.php'; ?>
 

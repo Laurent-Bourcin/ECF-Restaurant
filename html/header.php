@@ -2,33 +2,49 @@
     <!-- Connect buton -->
     <div class="row">
         <div class="col-1 offset-11 align-self-end">
-            <button class="btn"> connexion </button>
+            <button class="btn bcg_plt_beige mt-1 plt_golden"> connexion </button>
         </div>
     </div>
     
     <!-- Logo Le Quai Antique-->
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 text-center mb-5">
             <img src="../Images/Logo.png" alt="Logo Le Quai Antique">
         </div>
     </div>
 
     <!-- Navbar -->
-    <div class="row">
+    <div class="row text-center">
         <div class="col-3">
-            <button class="btn" onclick="window.location.href='./index.php'"> Accueil </button>
+            <button 
+                class="btn bcg_plt_golden px-5" 
+                onclick="window.location.href='./index.php'">
+                Accueil 
+            </button>
         </div>
 
         <div class="col-3">
-            <button class="btn" onclick="window.location.href='./food_list.php'"> Carte </button>
+            <button 
+                class="btn bcg_plt_golden px-5" 
+                onclick="window.location.href='./food_list.php'">
+                Carte
+            </button>
         </div>
 
         <div class="col-3">
-            <button class="btn" onclick="window.location.href='./menus.php'"> Menus </button>
+            <button 
+                class="btn bcg_plt_golden px-5" 
+                onclick="window.location.href='./menus.php'">
+                Menus 
+            </button>
         </div>
 
         <div class="col-3">
-            <button class="btn" onclick="window.location.href='./hours.php'"> Horaires </button>
+            <button 
+                class="btn bcg_plt_golden px-5" 
+                onclick="window.location.href='./hours.php'">
+                Horaires
+            </button>
         </div>
     </div>
 </header>

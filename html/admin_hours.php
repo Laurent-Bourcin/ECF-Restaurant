@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
-    <title>ECF_Restaurant_Hours</title>
+    <title>ECF_Restaurant_Hours_admin</title>
 </head>
 <body>
 
@@ -72,6 +72,7 @@
             </div>
     </section>
 
+    <!-- choice cutlerys number -->
     <div class="row">
         <div class="col-12">
             <p> 

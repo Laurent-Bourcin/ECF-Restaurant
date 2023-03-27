@@ -1,0 +1,19 @@
+/* bck = background and plt=palette */
+
+/* Background */
+.bcg_plt_beige {
+    background-color: #EBBD85;
+}
+
+.bcg_plt_golden {
+    background-color: #a08b28;
+}
+
+/* color */
+.plt_golden {
+    color: #a08b28;
+}
+
+.plt_brown {
+    color: #926F56;
+}
