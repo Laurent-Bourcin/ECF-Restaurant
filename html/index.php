@@ -32,7 +32,7 @@
 </main>
 
 <!-- test -->
-<button onclick="window.location.href='./admin_food_list.php'"> TEST </button>
+<button onclick="window.location.href='./admin_hours.php'"> TEST </button>
 
 <!-- footer -->
 <?php include 'footer.php'; ?>
