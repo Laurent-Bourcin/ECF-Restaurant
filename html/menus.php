@@ -15,7 +15,7 @@
 
 <main class="container-fluid">
 <!-- title -->
-    <div class="row mt-3 mt-xl-5">
+    <div class="row mt-3 mt-xl-5 mb-xl-4">
         <div class="col-12 text-center">
             <h1 class="ff_andalus"> Menus </h1>
         </div>
