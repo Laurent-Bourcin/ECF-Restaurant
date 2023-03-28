@@ -2,7 +2,9 @@
     <!-- Connect buton -->
     <div class="row mb-3">
         <div class="col-12 text-end">
-            <button class="btn btn-sm bcg_plt_beige mt-1 plt_golden">
+            <button 
+                class="btn btn-sm bcg_plt_beige mt-1 plt_golden"
+                onclick="window.location.href='./connection.php'">
                 <span class="ff_arabic_btn"> Connexion </span>
             </button>
         </div>

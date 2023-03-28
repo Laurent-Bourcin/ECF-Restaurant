@@ -16,7 +16,7 @@
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="Palette_graphique.svg"
-   inkscape:export-filename="C:\Users\User\formation_evaluations\ECF-Restaurant\Livrables\Palette_graphique.png"
+   inkscape:export-filename="C:\xampp\htdocs\ECF-Restaurant\Livrables\Charte_graphique\png\Palette_graphique.png"
    inkscape:export-xdpi="101"
    inkscape:export-ydpi="101">
   <defs
@@ -29,15 +29,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="315.74692"
-     inkscape:cy="369.56798"
+     inkscape:cx="446.75748"
+     inkscape:cy="350.3675"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="1002"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1680"
+     inkscape:window-height="988"
+     inkscape:window-x="1272"
+     inkscape:window-y="198"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
@@ -303,5 +303,23 @@
          x="57.462948"
          y="236.95781"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px" /></text>
+    <rect
+       style="opacity:1;fill:#ecc392;fill-opacity:0.99607843;fill-rule:evenodd;stroke:none;stroke-width:0.24088861;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect21-6"
+       width="36.663685"
+       height="11.717263"
+       x="61.421127"
+       y="245.02827" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#aa973f;fill-opacity:0.99607843;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="70.258629"
+       y="252.65218"
+       id="text63-1-1"><tspan
+         sodipodi:role="line"
+         id="tspan61-2-4"
+         x="70.258629"
+         y="252.65218"
+         style="fill:#aa973f;fill-opacity:0.99607843;stroke-width:0.26458332px">Button</tspan></text>
   </g>
 </svg>
