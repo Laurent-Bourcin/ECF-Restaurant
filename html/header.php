@@ -3,7 +3,7 @@
     <div class="row mb-3">
         <div class="col-12 text-end">
             <button class="btn btn-sm bcg_plt_beige mt-1 plt_golden">
-                <span class="ff_arabic"> Connexion </span>
+                <span class="ff_arabic_btn"> Connexion </span>
             </button>
         </div>
     </div>
@@ -21,7 +21,7 @@
             <button 
                 class="btn btn-sm bcg_plt_golden px-md-5" 
                 onclick="window.location.href='./index.php'">
-                <span class="ff_arabic"> Accueil </span>
+                <span class="ff_arabic_btn"> Accueil </span>
             </button>
         </div>
 
@@ -29,7 +29,7 @@
             <button 
                 class="btn btn-sm bcg_plt_golden px-md-5" 
                 onclick="window.location.href='./food_list.php'">
-                <span class="ff_arabic"> Carte </span>
+                <span class="ff_arabic_btn"> Carte </span>
             </button>
         </div>
 
@@ -37,7 +37,7 @@
             <button 
                 class="btn btn-sm bcg_plt_golden px-md-5" 
                 onclick="window.location.href='./menus.php'">
-                <span class="ff_arabic"> Menus </span>
+                <span class="ff_arabic_btn"> Menus </span>
             </button>
         </div>
 
@@ -45,7 +45,7 @@
             <button 
                 class="btn btn-sm bcg_plt_golden px-md-5" 
                 onclick="window.location.href='./hours.php'">
-                <span class="ff_arabic"> Horaires </span>
+                <span class="ff_arabic_btn"> Horaires </span>
             </button>
         </div>
     </div>

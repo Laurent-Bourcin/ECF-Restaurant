@@ -8,6 +8,10 @@ bck = background and plt=palette */
     background-color: #a08b28;
 }
 
+.bcg_plt_brown {
+    background-color: #926F56;
+}
+
 /* color */
 .plt_golden {
     color: #a08b28;
@@ -27,7 +31,22 @@ ff=font-family */
     font-family: "arabic";
     src: url("../Font/Arabic\ Typesetting/arabic_typesetting.ttf");
 }
+
+.ff_arabic_btn {
+    font-family: "arabic";
+    font-size: 1.5em;
+}
+
 .ff_arabic {
     font-family: "arabic";
     font-size: 1.5em;
+}
+
+@font-face {
+    font-family: "andalus";
+    src: url("../Font/Andalus/andalus.ttf");
+}
+
+.ff_andalus {
+    font-family: "andalus";
 }
