@@ -43,7 +43,7 @@
         <div class="col-6">
             <button 
                 class="btn btn-sm bcg_plt_golden px-md-5" 
-                onclick="#">
+                onclick="window.location.href='./connection_create_account.php'">
                 <span class="ff_arabic_btn"> Créer un compte </span>
             </button>
         </div>
