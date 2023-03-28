@@ -14,7 +14,7 @@
 <?php include 'header.php'; ?> 
 
 <main class="container-fluid">
-<!-- title -->
+    <!-- title -->
     <div class="row mt-3 mt-xl-5 mb-xl-4">
         <div class="col-12 text-center">
             <h1 class="ff_andalus"> Horaires </h1>
@@ -24,38 +24,38 @@
     <!-- hours list -->
     <section class="container-fluid mb-5">
         <!-- week -->
-            <div class="row justify-content-center bcg_plt_beige">
-                <div class="col-10 text-center bcg_plt_brown my-4">
-                    <h2 class="ff_arabic"> Lundi au Vendredi </h2>
-                    <table class="table text-white">
-                        <tr>
-                            <td> Midi </td>
-                            <td> 12h - 14h30 </td>
-                        </tr>
-                        <tr>
-                            <td> Soir </td>
-                            <td> 19h30 - 22h30 </td>
-                        </tr>
-                    </table>
-                </div>
+        <div class="row justify-content-center bcg_plt_beige">
+            <div class="col-10 text-center bcg_plt_brown my-4">
+                <h2 class="ff_arabic"> Lundi au Vendredi </h2>
+                <table class="table text-white">
+                    <tr>
+                        <td> Midi </td>
+                        <td> 12h - 14h30 </td>
+                    </tr>
+                    <tr>
+                        <td> Soir </td>
+                        <td> 19h30 - 22h30 </td>
+                    </tr>
+                </table>
             </div>
+        </div>
 
-            <!-- week-end -->
-            <div class="row justify-content-center bcg_plt_beige">
-                <div class="col-10 text-center bcg_plt_brown my-4">
-                    <h2 class="ff_arabic"> Samedi </h2>
-                    <table class="table text-white">
-                        <tr>
-                            <td> Midi </td>
-                            <td> 12h - 14h30 </td>
-                        </tr>
-                        <tr>
-                            <td> Soir </td>
-                            <td> 19h00 - 23h00 </td>
-                        </tr>
-                    </table>
-                </div>
+        <!-- week-end -->
+        <div class="row justify-content-center bcg_plt_beige">
+            <div class="col-10 text-center bcg_plt_brown my-4">
+                <h2 class="ff_arabic"> Samedi </h2>
+                <table class="table text-white">
+                    <tr>
+                        <td> Midi </td>
+                        <td> 12h - 14h30 </td>
+                    </tr>
+                    <tr>
+                        <td> Soir </td>
+                        <td> 19h00 - 23h00 </td>
+                    </tr>
+                </table>
             </div>
+        </div>
     </section>
 </main>
 
