@@ -10,6 +10,11 @@
 </head>
 <body>
 
+<?php require('../Back/config.php'); ?> 
+
+<?php if($displayForm==1){
+    ?>
+
 <main class="container-fluid">
     <div class="row">
         <div class="col-12 text-center mb-5">
@@ -18,81 +23,97 @@
     </div>
 
     <section class="container-fluid mb-5">
-        <!-- Email -->
-        <div class="row mb-3 text-center">
-            <div class="col-4 text-end">
-                <label for="form_create_email"> Email </label>
+        <form method="post" action="">
+            <!-- Email -->
+            <div class="row mb-3 text-center">
+                <div class="col-4 text-end">
+                    <label for="form_create_email"> Email </label>
+                </div>
+                <div class="col-8">
+                    <input type="text" name="form_create_email" id="form_create_email" required>
+                </div>
             </div>
-            <div class="col-8">
-                <input type="text" name="form_create_email" id="form_create_email" required>
-            </div>
-        </div>
 
-        <!-- Password -->
-        <div class="row text-center mb-3">
-            <div class="col-4 text-end">
-                <label for="form_create_pwd"> Mot de passe </label>
+            <!-- Password -->
+            <div class="row text-center mb-3">
+                <div class="col-4 text-end">
+                    <label for="form_create_pwd"> Mot de passe </label>
+                </div>
+                <div class="col-8">
+                    <input type="password" name="form_create_pwd" id="form_create_pwd" required>
+                </div>
             </div>
-            <div class="col-8">
-                <input type="text" name="form_create_pwd" id="form_create_pwd" required>
-            </div>
-        </div>
 
-        <!-- Surname -->
-        <div class="row text-center mb-3">
-            <div class="col-4 text-end">
-                <label for="form_create_surname"> Nom </label>
+            <!-- Surname -->
+            <div class="row text-center mb-3">
+                <div class="col-4 text-end">
+                    <label for="form_create_surname"> Nom </label>
+                </div>
+                <div class="col-8">
+                    <input type="text" name="form_create_surname" id="form_create_surname" required>
+                </div>
             </div>
-            <div class="col-8">
-                <input type="text" name="form_create_surname" id="form_create_surname" required>
-            </div>
-        </div>
 
-        <!-- Name -->
-        <div class="row text-center mb-3">
-            <div class="col-4 text-end">
-                <label for="form_create_name"> Prénom </label>
+            <!-- Name -->
+            <div class="row text-center mb-3">
+                <div class="col-4 text-end">
+                    <label for="form_create_name"> Prénom </label>
+                </div>
+                <div class="col-8">
+                    <input type="text" name="form_create_name" id="form_create_name" required>
+                </div>
             </div>
-            <div class="col-8">
-                <input type="text" name="form_create_name" id="form_create_name" required>
-            </div>
-        </div>
 
-        <!-- Number of seats -->
-        <div class="row text-center mb-3">
-            <div class="col-4 text-end">
-                <label for="form_create_seat"> Couverts </label>
+            <!-- Number of seats -->
+            <div class="row text-center mb-3">
+                <div class="col-4 text-end">
+                    <label for="form_create_seat"> Couverts </label>
+                </div>
+                <div class="col-8">
+                    <select name="form_create_seat" id="form_create_seat">
+                        <option value=""> Sélectionner </option>
+                    </select>
+                </div>
             </div>
-            <div class="col-8">
-                <select name="form_create_seat" id="form_create_seat">
-                    <option value=""> Sélectionner </option>
-                </select>
-            </div>
-        </div>
 
-        <!-- Allergy -->
-        <div class="row text-center mb-3">
-            <div class="col-4 text-end">
-                <label for="form_create_allergy"> Allergies (ctrl si plusieurs) </label>
+            <!-- Allergy -->
+            <div class="row text-center mb-3">
+                <div class="col-4 text-end">
+                    <label for="form_create_allergy"> Allergies (ctrl si plusieurs) </label>
+                </div>
+                <div class="col-8">
+                    <select name="form_create_allergy" id="form_create_allergy">
+                        <option value=""> Sélectionner </option>
+                    </select>
+                </div>
             </div>
-            <div class="col-8">
-                <select name="form_create_allergy" id="form_create_allergy">
-                    <option value=""> Sélectionner </option>
-                </select>
+
+        <!-- Cancel -->
+            <div class="row text-center">
+                <div class="col-6 text-center">
+                    <button 
+                        class="btn btn-sm bcg_plt_golden px-md-5" 
+                        onclick="window.location.href='./connection.php'">
+                        <span class="ff_arabic_btn"> Annuler </span>
+                    </button>
+                </div>
+
+                <div class="col-6 text-center">
+                    <button 
+                        type="submit"
+                        class="btn btn-sm bcg_plt_golden px-md-5"
+                        name="submit">
+                        <span class="ff_arabic_btn"> Envoyer </span>
+                    </button>
+                </div>
             </div>
-        </div>
+        </form>
     </section>
-
-    <!-- Cancel -->
-        <div class="col-12 text-center">
-            <button 
-                class="btn btn-sm bcg_plt_golden px-md-5" 
-                onclick="window.location.href='./connection.php'">
-                <span class="ff_arabic_btn"> Annuler </span>
-            </button>
-        </div>
-</section>
 </main>
+
+<?php
+}
+?>
 
 </body>
 <script src="../Bootstrap/js/bootstrap.bundle.js"></script>
