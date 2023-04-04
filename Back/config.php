@@ -53,6 +53,18 @@ $_POST['form_create_name'])){
             echo "Vous êtes inscrit avec succès!";
             // stop display form
             $displayForm=0;
+            
+            ?>
+            <div class="row mt-2 mb-5">
+                <div class="col-12 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./index.php'"> 
+                            Accueil 
+                    </button>
+                </div>
+            </div>
+
+            <?php
         }
     }
 }
