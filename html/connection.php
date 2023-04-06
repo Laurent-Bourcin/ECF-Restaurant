@@ -43,7 +43,11 @@ if(isset($_POST['submit'])){
                 } else {
 
                     // open session
-                    $_SESSION['email'] = $email;
+                    $mysqli->set_charset("utf8");
+                    while ($ligne = $Requete->fetch_assoc()) {
+                        $_SESSION['name'] = $ligne['name'];
+                        $_SESSION['surname'] = $ligne['surname'];
+                    }
                     echo "Vous êtes à présent connecté !";
                     // stop display form
                     $displayForm=0;

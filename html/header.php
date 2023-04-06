@@ -1,7 +1,18 @@
+<?php
+session_start();
+?>
+
 <header class="container-fluid">
     <!-- Connect buton -->
     <div class="row mb-3">
         <div class="col-12 text-end">
+            <!-- If connect -->
+            <?php
+            if ($_SESSION['name'] == true) {
+            echo $_SESSION['name']. " ". $_SESSION['surname'];
+            }
+            ?>
+
             <button 
                 class="btn btn-sm bcg_plt_beige mt-1 plt_golden"
                 onclick="window.location.href='./connection.php'">
