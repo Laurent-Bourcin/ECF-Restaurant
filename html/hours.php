@@ -63,6 +63,52 @@ session_start();
     </section>
 </main>
 
+<?php
+    // Admin buttons
+    if (isset($_SESSION['name'])) {
+        if ($_SESSION['type']==='Admin') {
+            ?>
+            <!-- Hours -->
+            <div class="row mt-2 mb-5">
+                <!-- Modify hours -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/hours_modify.php'"> 
+                            Modifier
+                    </button>
+                </div>
+
+                <!-- Add hours -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/hours_add.php'"> 
+                            Ajouter
+                    </button>
+                </div>
+
+                <!-- Remove hours -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/hours_remove.php'"> 
+                            Supprimer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Max seaters -->
+            <div class="row mt-2 mb-5">
+                <div class="col-12 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/seaters_modify.php'"> 
+                            Modifier nombre de places
+                    </button>
+                </div>
+            </div>
+        <?php
+        }
+    }
+    ?>
+
 <!-- footer -->
 <?php include 'footer.php'; ?>
 
