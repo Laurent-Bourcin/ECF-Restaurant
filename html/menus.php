@@ -57,6 +57,69 @@ session_start();
     </section>
 </main>
 
+<?php
+    // Admin buttons
+    if (isset($_SESSION['name'])) {
+        if ($_SESSION['type']==='Admin') {
+            ?>
+            <!-- Menu -->
+            <div class="row mt-2 mb-5">
+                <!-- Modify menu -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/menu_menu_modify.php'"> 
+                            Modifier menu
+                    </button>
+                </div>
+
+                <!-- Add menu -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/menu_menu_add.php'"> 
+                            Ajouter menu
+                    </button>
+                </div>
+
+                <!-- Remove menu -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/menu_menu_remove.php'"> 
+                            Supprimer menu
+                    </button>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="row mt-2 mb-5">
+                <!-- Modify form -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/menu_form_modify.php'"> 
+                            Modifier formule
+                    </button>
+                </div>
+
+                <!-- Add form -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/menu_form_add.php'"> 
+                            Ajouter formule
+                    </button>
+                </div>
+
+                <!-- Remove form -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/menu_form_remove.php'"> 
+                            Supprimer formule
+                    </button>
+                </div>
+            </div>
+        <?php
+        }
+    }
+    ?>
+
 <!-- footer -->
 <?php include 'footer.php'; ?>
 

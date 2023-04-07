@@ -82,7 +82,7 @@ session_start();
             <!-- Modify food list -->
                 <div class="col-4 text-center">
                     <button class="btn bcg_plt_beige plt_golden" 
-                            onclick="window.location.href='./food_modify.php'"> 
+                            onclick="window.location.href='./admin/food_modify.php'"> 
                             Modifier 
                     </button>
                 </div>
@@ -90,7 +90,7 @@ session_start();
                 <!-- Add food list -->
                 <div class="col-4 text-center">
                     <button class="btn bcg_plt_beige plt_golden" 
-                            onclick="window.location.href='./food_add.php'"> 
+                            onclick="window.location.href='./admin/food_add.php'"> 
                             Ajouter 
                     </button>
                 </div>
@@ -98,7 +98,7 @@ session_start();
                 <!-- Remove food list -->
                 <div class="col-4 text-center">
                     <button class="btn bcg_plt_beige plt_golden" 
-                            onclick="window.location.href='./food_remove.php'"> 
+                            onclick="window.location.href='./admin/food_remove.php'"> 
                             Supprimer 
                     </button>
                 </div>

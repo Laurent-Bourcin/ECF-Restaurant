@@ -71,7 +71,7 @@ session_start();
             <!-- Modify image -->
                 <div class="col-4 text-center">
                     <button class="btn bcg_plt_beige plt_golden" 
-                            onclick="window.location.href='./image_modify.php'"> 
+                            onclick="window.location.href='./admin/image_modify.php'"> 
                             Modifier 
                     </button>
                 </div>
@@ -79,7 +79,7 @@ session_start();
                 <!-- Add image -->
                 <div class="col-4 text-center">
                     <button class="btn bcg_plt_beige plt_golden" 
-                            onclick="window.location.href='./image_add.php'"> 
+                            onclick="window.location.href='./admin/image_add.php'"> 
                             Ajouter 
                     </button>
                 </div>
@@ -87,7 +87,7 @@ session_start();
                 <!-- Remove image -->
                 <div class="col-4 text-center">
                     <button class="btn bcg_plt_beige plt_golden" 
-                            onclick="window.location.href='./image_remove.php'"> 
+                            onclick="window.location.href='./admin/image_remove.php'"> 
                             Supprimer 
                     </button>
                 </div>
