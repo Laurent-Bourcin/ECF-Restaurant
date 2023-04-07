@@ -1,23 +1,29 @@
-<?php
-session_start();
-?>
-
 <header class="container-fluid">
     <!-- Connect buton -->
     <div class="row mb-3">
         <div class="col-12 text-end">
+
             <!-- If connect -->
             <?php
-            if ($_SESSION['name'] == true) {
-            echo $_SESSION['name']. " ". $_SESSION['surname'];
-            }
+            if (isset($_SESSION['name'])) {
+                echo $_SESSION['name']. " ". $_SESSION['surname'];
+                ?>
+                <button 
+                    class="btn btn-sm bcg_plt_beige mt-1 plt_golden"
+                    onclick="window.location.href='./logout.php'">
+                    <span class="ff_arabic_btn"> Déconnexion </span>
+                </button>
+            <?php
+            } else {
             ?>
+                <button 
+                    class="btn btn-sm bcg_plt_beige mt-1 plt_golden"
+                    onclick="window.location.href='./connection.php'">
+                    <span class="ff_arabic_btn"> Connexion </span>
+                </button>
+            <?php 
+            } ?>
 
-            <button 
-                class="btn btn-sm bcg_plt_beige mt-1 plt_golden"
-                onclick="window.location.href='./connection.php'">
-                <span class="ff_arabic_btn"> Connexion </span>
-            </button>
         </div>
     </div>
     

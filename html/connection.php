@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,7 +16,6 @@
 
 <?php
 $displayForm = 1;
-session_start();
 
 // if connexion button clicked
 if(isset($_POST['submit'])){
@@ -43,11 +46,9 @@ if(isset($_POST['submit'])){
                 } else {
 
                     // open session
-                    $mysqli->set_charset("utf8");
-                    while ($ligne = $Requete->fetch_assoc()) {
-                        $_SESSION['name'] = $ligne['name'];
-                        $_SESSION['surname'] = $ligne['surname'];
-                    }
+                    $datas[] = mysqli_fetch_array($Requete);
+                    $_SESSION['name'] = $datas[0]['name'];
+                    $_SESSION['surname'] = $datas[0]['surname'];
                     echo "Vous êtes à présent connecté !";
                     // stop display form
                     $displayForm=0;
