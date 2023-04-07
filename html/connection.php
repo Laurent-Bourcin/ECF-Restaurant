@@ -49,6 +49,7 @@ if(isset($_POST['submit'])){
                     $datas[] = mysqli_fetch_array($Requete);
                     $_SESSION['name'] = $datas[0]['name'];
                     $_SESSION['surname'] = $datas[0]['surname'];
+                    $_SESSION['type'] = $datas[0]['type'];
                     echo "Vous êtes à présent connecté !";
                     // stop display form
                     $displayForm=0;

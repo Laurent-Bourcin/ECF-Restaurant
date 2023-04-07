@@ -6,6 +6,9 @@
             <!-- If connect -->
             <?php
             if (isset($_SESSION['name'])) {
+                if ($_SESSION['type']==='Admin') {
+                    echo 'Admin ';
+                }
                 echo $_SESSION['name']. " ". $_SESSION['surname'];
                 ?>
                 <button 
