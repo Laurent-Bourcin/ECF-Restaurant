@@ -23,25 +23,22 @@ session_start();
         <div class="col-12">
             <div id="carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img 
-                            src="../Images/carousel/fondue.png" 
-                            class="d-block w-100" 
-                            alt="Fondue">
-                    </div>
-                    <div class="carousel-item">
-                        <img 
-                            src="../Images/carousel/raclette.png" 
-                            class="d-block w-100" 
-                            alt="Raclette">
-                    </div>
-                    <div class="carousel-item">
-                        <img 
-                            src="../Images/carousel/tartiflette.png" 
-                            class="d-block w-100" 
-                            alt="Tartiflette">
-                    </div>
+                    <?php
+                    $scandir = scandir("../Images/carousel/");
+                    foreach($scandir as $file){
+                        if(preg_match("#\.(jpg|jpeg|png)$#",strtolower($file))){
+                    ?>
+                        <div class="carousel-item active">
+                            <img 
+                                src="../Images/carousel/<?php echo $file ?>" 
+                                class="d-block w-100" 
+                                alt= "<?php $file; ?>">
+                        </div>
+                    <?php
+                    }};
+                    ?>
                 </div>
+                
                 <button 
                     class="carousel-control-prev" 
                     type="button" 

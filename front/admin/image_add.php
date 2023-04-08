@@ -78,7 +78,7 @@ if(isset($_FILES['file'])){
         </form>
     </section>
 
-<!-- Cancel -->
+<!-- Back -->
 <div class="col-6">
     <button 
         class="btn btn-sm bcg_plt_golden px-md-5" 
