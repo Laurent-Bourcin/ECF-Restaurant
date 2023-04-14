@@ -16,6 +16,10 @@ session_start();
 <body>
 
 <?php
+$displayForm = 1;
+?>
+
+<?php
 // Verification Admin
 if (isset($_SESSION['name'])) {
     if ($_SESSION['type']==='Admin') {
