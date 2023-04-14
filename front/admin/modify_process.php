@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>ECF_Restaurant_Admin_Image_Supprimer</title>
+    <title>ECF_Restaurant_Admin_Image_Modifier_Processus</title>
 </head>
 
 <?php
@@ -22,15 +22,14 @@ if (isset($_SESSION['name'])) {
 <!-- remove img -->
 <div class="row mb-3 text-center">
     <div class="col-12 text-center">
-        <?php if(isset($_POST['delete'])) {
-            if ($_POST['delete'] == "delete"){
+        <?php if(isset($_POST['modify'])) {
+            if ($_POST['modify'] == "modify"){
                 $scandir = scandir("../../Images/carousel/");
-                $file_to_delete = $_POST['image_remove'];
-                if(unlink("../../Images/carousel/$file_to_delete")) {
-                    echo "Votre image a bien été supprimée de la page principale";
-                } else {
-                    echo 'erreur';
-                }
+                $file_to_modify = $_POST['image_modify'];
+                $new_name = $_POST['new_name'];
+                rename("../../Images/carousel/$file_to_modify", 
+                    "../../Images/carousel/$new_name.jpg");
+                echo $file_to_modify .' a été modifié en '. $new_name;
             } 
         }?>
     </div>

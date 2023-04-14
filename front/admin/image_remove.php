@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>ECF_Restaurant_Admin_Image_Supprimer</title>
+    <title>ECF_Restaurant_Admin_Image_Supprimer_Processus</title>
 </head>
 
 <?php

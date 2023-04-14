@@ -39,7 +39,9 @@ session_start();
                                     alt= "<?php $file; ?>">
                                     <?php $name = pathinfo($file); ?>
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h3> <?php echo $name['filename']; ?> </h3>
+                                        <h2 class="bcg_plt_brown font-weight-bold"> 
+                                            <?php echo $name['filename']; ?> 
+                                        </h2>
                                     </div>
                             </div>
                     <?php
