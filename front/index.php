@@ -37,6 +37,10 @@ session_start();
                                     src="../Images/carousel/<?php echo $file ?>" 
                                     class="d-block w-100" 
                                     alt= "<?php $file; ?>">
+                                    <?php $name = pathinfo($file); ?>
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h3> <?php echo $name['filename']; ?> </h3>
+                                    </div>
                             </div>
                     <?php
                             $i++;

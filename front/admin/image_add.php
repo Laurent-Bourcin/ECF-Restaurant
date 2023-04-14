@@ -72,7 +72,7 @@ if(isset($_FILES['file'])){
 
         // Modify img
         list($width, $height) = getimagesize($image_path);
-        $modwidth = 2000;
+        $modwidth = 1800;
         $modheight = 1000;
         $tn = imagecreatetruecolor($modwidth, $modheight) ;
         $image = $image_create_func($image_path) ;
