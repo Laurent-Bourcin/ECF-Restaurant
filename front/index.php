@@ -25,20 +25,25 @@ session_start();
                 <div class="carousel-inner">
                     <?php
                     $scandir = scandir("../Images/carousel/");
+                    $i=0;
                     foreach($scandir as $file){
                         if(preg_match("#\.(jpg|jpeg|png)$#",strtolower($file))){
+                            if ($i===0) {
+                                $set_ = 'active'; 
+                            } else {$set_ = ''; }
                     ?>
-                        <div class="carousel-item active">
-                            <img 
-                                src="../Images/carousel/<?php echo $file ?>" 
-                                class="d-block w-100" 
-                                alt= "<?php $file; ?>">
-                        </div>
+                            <div class="carousel-item <?php echo $set_; ?>">
+                                <img 
+                                    src="../Images/carousel/<?php echo $file ?>" 
+                                    class="d-block w-100" 
+                                    alt= "<?php $file; ?>">
+                            </div>
                     <?php
+                            $i++;
                     }};
                     ?>
                 </div>
-                
+
                 <button 
                     class="carousel-control-prev" 
                     type="button" 
