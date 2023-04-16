@@ -17,6 +17,11 @@ session_start();
 <!-- header -->
 <?php include 'header.php'; ?> 
 
+<?php 
+// Connection at db
+$mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
+?>
+
 <main class="container-fluid">
     <!-- title -->
     <div class="row mt-3 mt-xl-5 mb-xl-4">
@@ -32,25 +37,39 @@ session_start();
             <div class="col-10 text-center bcg_plt_brown my-4">
                 <h2 class="ff_arabic"> Entrées </h2>
                 <table class="table text-white">
-                    <tr>
-                        <td>titre</td>
-                        <td>description</td>
-                        <td>prix</td>
-                    </tr>
+                <?php
+                $result = $mysqli->query("SELECT * FROM food WHERE type='starter'");
+                    while($data = mysqli_fetch_array($result)) { 
+                ?>
+                        <tr>
+                            <td class=" col-4 text-start"> <?php echo $data['title']; ?> </td>
+                            <td class="col-3 text-start"> <?php echo $data['description']; ?> </td>
+                            <td class="col-3 text-end"> <?php echo $data['price']; ?> </td>
+                        </tr>
+                    <?php 
+                    }
+                ?>
                 </table>
             </div>
         </div>
 
-        <!-- dishes -->
+        <!-- main -->
         <div class="row justify-content-center bcg_plt_beige">
             <div class="col-10 text-center bcg_plt_brown my-4">
                 <h2 class="ff_arabic"> Plats </h2>
                 <table class="table text-white">
-                    <tr>
-                        <td>titre</td>
-                        <td>description</td>
-                        <td>prix</td>
-                    </tr>
+                <?php
+                $result = $mysqli->query("SELECT * FROM food WHERE type='main'");
+                    while($data = mysqli_fetch_array($result)) { 
+                ?>
+                        <tr>
+                            <td class="col-4 text-start"> <?php echo $data['title']; ?> </td>
+                            <td class="col-3 text-start"> <?php echo $data['description']; ?> </td>
+                            <td class="col-3 text-end"> <?php echo $data['price']; ?> </td>
+                        </tr>
+                    <?php 
+                    }
+                ?>
                 </table>
             </div>
         </div>
@@ -60,11 +79,18 @@ session_start();
             <div class="col-10 text-center bcg_plt_brown my-4">
                 <h2 class="ff_arabic"> Desserts </h2>
                 <table class="table text-white">
-                    <tr>
-                        <td>titre</td>
-                        <td>description</td>
-                        <td>prix</td>
-                    </tr>
+                <?php
+                $result = $mysqli->query("SELECT * FROM food WHERE type='dessert'");
+                    while($data = mysqli_fetch_array($result)) { 
+                ?>
+                        <tr>
+                            <td class=" col-4 text-start"> <?php echo $data['title']; ?> </td>
+                            <td class="col-3 text-start"> <?php echo $data['description']; ?> </td>
+                            <td class="col-3 text-end"> <?php echo $data['price']; ?> </td>
+                        </tr>
+                    <?php 
+                    }
+                ?>
                 </table>
             </div>
         </div>

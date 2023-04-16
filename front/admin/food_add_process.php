@@ -39,7 +39,7 @@ if(mysqli_num_rows(mysqli_query($mysqli,"SELECT * FROM food WHERE title=
         ")){
         echo "Une erreur s'est produite: ".mysqli_error($mysqli);
     } else {
-        echo "Vous êtes inscrit avec succès!";
+        echo "Le plat a été ajouté à la carte!";
     }
 }
 ?>
