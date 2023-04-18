@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>ECF_Restaurant_Admin_Plat_Supprimer_Processus</title>
+    <title>ECF_Restaurant_Admin_Carte_Modifier_Processus</title>
 </head>
 
 <?php
@@ -26,10 +26,18 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
 
 <?php
 // Remove food
-if (!mysqli_query($mysqli,"DELETE FROM food WHERE title='".$_POST['food_title']."'")){
+$new_description = $_POST['new_description'];
+$food_title = $_POST['food_title'];
+$new_price = $_POST['new_price'];
+$new_title = $_POST['new_title'];
+if (!mysqli_query($mysqli,"UPDATE food SET 
+    title='$new_title',
+    description='$new_description',
+    price='$new_price'
+    WHERE title='$food_title'")){
         echo "Une erreur s'est produite: ".mysqli_error($mysqli);
     } else {
-        echo "Le plat a été supprimé de la carte!";
+        echo "Le plat a été modifié !";
     }
 ?>
 

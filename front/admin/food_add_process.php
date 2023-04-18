@@ -48,7 +48,7 @@ if(mysqli_num_rows(mysqli_query($mysqli,"SELECT * FROM food WHERE title=
 <div class="col-6">
     <button 
         class="btn btn-sm bcg_plt_golden px-md-5" 
-        onclick="window.location.href='./food_add.php'">
+        onclick="window.location.href='../food_list.php'">
         <span class="ff_arabic_btn"> Retour </span>
     </button>
 </div>
