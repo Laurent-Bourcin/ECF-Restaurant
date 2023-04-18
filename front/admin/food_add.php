@@ -86,7 +86,7 @@ if (isset($_SESSION['name'])) {
 <div class="col-6">
 <button 
     class="btn btn-sm bcg_plt_golden px-md-5" 
-    onclick="window.location.href='../index.php'">
+    onclick="window.location.href='../food_list.php'">
     <span class="ff_arabic_btn"> Annuler </span>
 </button>
 </div>
