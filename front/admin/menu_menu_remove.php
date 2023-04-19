@@ -19,18 +19,57 @@ if (isset($_SESSION['name'])) {
     if ($_SESSION['type']==='Admin') {
         ?>
 
-<?php
-// code à ajouter
-echo 'Supprimer menu';
+<main class="container-fluid">
+<div class="row">
+    <div class="col-12 text-center mb-5">
+        <h2> Supprimer un menu </h2>
+    </div>
+</div>
+
+<?php 
+// Connection at db
+$mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
 ?>
 
-<!-- Cancel -->
+<!-- form -->
+<section class="container-fluid mb-5">
+    <form action="menu_menu_remove_process.php" method="post">
+        <!-- Remove menu -->
+        <div class="row mb-3 text-center">
+            <div class="col-6 text-end">
+                <label for="menu_choice"> Menu à supprimer </label>
+            </div>
+            <div class="col-6 text-start">
+                <?php
+                // Choice what to remove
+                $result = $mysqli->query("SELECT title FROM menu");
+                ?>
+                <select name="menu_choice" id="menu_choice">
+                <?php while ($row = mysqli_fetch_array($result)) { ?>
+                    <option value="<?php echo $row['title'] ?>"> 
+                        <?php echo $row['title'] ?> 
+                    </option>
+                <?php }; ?>
+                </select>
+            </div>
+        </div>
+
+        <!-- Remove button -->
+        <div class="row mb-3 text-center">
+            <div class="col-12 text-center">
+                <button type="submit" name="remove" value="remove"> Supprimer </button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<!-- Back -->
 <div class="col-6">
-    <button 
-        class="btn btn-sm bcg_plt_golden px-md-5" 
-        onclick="window.location.href='../menus.php'">
-        <span class="ff_arabic_btn"> Annuler </span>
-    </button>
+<button 
+    class="btn btn-sm bcg_plt_golden px-md-5" 
+    onclick="window.location.href='../menus.php'">
+    <span class="ff_arabic_btn"> Annuler </span>
+</button>
 </div>
 
 <?php
