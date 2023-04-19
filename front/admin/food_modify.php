@@ -41,7 +41,7 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
             </div>
             <div class="col-6 text-start">
                 <?php
-                // Choice what to remove
+                // Choice what to modify
                 $result = $mysqli->query("SELECT title FROM food");
                 ?>
                 <select name="food_title" id="food_title">
@@ -75,10 +75,10 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
             </div>
         </div>
 
-        <!-- Remove button -->
+        <!-- Modify button -->
         <div class="row mb-3 text-center">
             <div class="col-12 text-center">
-                <button type="submit" name="remove" value="remove"> Modifier </button>
+                <button type="submit" name="modify" value="modify"> Modifier </button>
             </div>
         </div>
     </form>
