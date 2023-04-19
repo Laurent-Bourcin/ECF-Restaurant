@@ -17,6 +17,11 @@ session_start();
 <!-- header -->
 <?php include 'header.php'; ?> 
 
+<?php 
+// Connection at db
+$mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
+?>
+
 <main class="container-fluid">
 <!-- title -->
     <div class="row mt-3 mt-xl-5 mb-xl-4">
@@ -27,33 +32,31 @@ session_start();
 
     <!-- menus list -->
     <section class="container-fluid mb-5">
-        <!-- menu 1 -->
-            <div class="row justify-content-center bcg_plt_beige">
-                <div class="col-10 text-center bcg_plt_brown my-4">
-                    <h2 class="ff_arabic"> Menu 1 </h2>
-                    <table class="table text-white">
-                        <tr>
-                            <td> Titre </td>
-                            <td> Formule 1: prix </td>
-                            <td> Formule 2: prix </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
 
-            <!-- menu 2  -->
-            <div class="row justify-content-center bcg_plt_beige">
-                <div class="col-10 text-center bcg_plt_brown my-4">
-                    <h2 class="ff_arabic"> Menu 2 </h2>
-                    <table class="table text-white">
-                        <tr>
-                            <td> Titre </td>
-                            <td> Formule 1: prix </td>
-                            <td> Formule 2: prix </td>
-                        </tr>
-                    </table>
-                </div>
+    <?php
+    // Loop for each menus in db
+    $result_menu = $mysqli->query("SELECT * FROM menu");
+    while($data = mysqli_fetch_array($result_menu)) { 
+    ?>
+        <!-- menu model -->
+        <div class="row justify-content-center bcg_plt_beige">
+            <div class="col-10 text-center bcg_plt_brown my-4">
+                <h2 class="ff_arabic"> <?php echo $data['title'] ?> </h2>
+                <table class="table text-white">
+                    <tr>
+                        <td> Titre </td>
+                        <td> Formule 1: prix </td>
+                        <td> Formule 2: prix </td>
+                    </tr>
+                </table>
             </div>
+        </div>
+
+    <?php 
+    // End of loop
+    } 
+    ?>
+
     </section>
 </main>
 
