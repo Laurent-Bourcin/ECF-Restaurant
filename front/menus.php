@@ -43,17 +43,27 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
             <div class="col-10 text-center bcg_plt_brown my-4">
                 <h2 class="ff_arabic"> <?php echo $data['title'] ?> </h2>
                 <table class="table text-white">
+                <?php
+                // Loop for each form in db
+                $menu = $data['title'];
+                $result_form = $mysqli->query("SELECT * FROM form WHERE menu='$menu'");
+                while($data_form = mysqli_fetch_array($result_form)) { 
+                ?>
                     <tr>
-                        <td> Titre </td>
-                        <td> Formule 1: prix </td>
-                        <td> Formule 2: prix </td>
+                        <td class=" col-4 text-start"> <?php echo $data_form['title'] ?> </td>
+                        <td class="col-3 text-start"> <?php echo $data_form['description'] ?> </td>
+                        <td class="col-3 text-end"> <?php echo $data_form['price'] ?> </td>
                     </tr>
+                    <?php 
+                // End of form loop
+                } 
+                ?>
                 </table>
             </div>
         </div>
 
     <?php 
-    // End of loop
+    // End of menu loop
     } 
     ?>
 
