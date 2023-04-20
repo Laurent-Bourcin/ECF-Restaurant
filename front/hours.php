@@ -15,7 +15,12 @@ session_start();
 <body>
 
 <!-- header -->
-<?php include 'header.php'; ?> 
+<?php include 'header.php'; ?>
+
+<?php 
+// Connection at db
+$mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
+?>
 
 <main class="container-fluid">
     <!-- title -->
@@ -27,10 +32,14 @@ session_start();
 
     <!-- hours list -->
     <section class="container-fluid mb-5">
-        <!-- week -->
+    <!-- Loop for each days -->
+    <?php
+    $result_days = $mysqli->query("SELECT * FROM days");
+    while($data = mysqli_fetch_array($result_days)) { 
+    ?>
         <div class="row justify-content-center bcg_plt_beige">
             <div class="col-10 text-center bcg_plt_brown my-4">
-                <h2 class="ff_arabic"> Lundi au Vendredi </h2>
+                <h2 class="ff_arabic"> <?php echo $data['title'] ?> </h2>
                 <table class="table text-white">
                     <tr>
                         <td> Midi </td>
@@ -43,23 +52,10 @@ session_start();
                 </table>
             </div>
         </div>
-
-        <!-- week-end -->
-        <div class="row justify-content-center bcg_plt_beige">
-            <div class="col-10 text-center bcg_plt_brown my-4">
-                <h2 class="ff_arabic"> Samedi </h2>
-                <table class="table text-white">
-                    <tr>
-                        <td> Midi </td>
-                        <td> 12h - 14h30 </td>
-                    </tr>
-                    <tr>
-                        <td> Soir </td>
-                        <td> 19h00 - 23h00 </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+    <?php
+    // End of days loop
+    }
+    ?>
     </section>
 </main>
 
@@ -68,13 +64,40 @@ session_start();
     if (isset($_SESSION['name'])) {
         if ($_SESSION['type']==='Admin') {
             ?>
+            <!-- Days -->
+            <div class="row mt-2 mb-5">
+                <!-- Modify days -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/day_modify.php'"> 
+                            Modifier jour
+                    </button>
+                </div>
+
+                <!-- Add hours -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/day_add.php'"> 
+                            Ajouter jour
+                    </button>
+                </div>
+
+                <!-- Remove hours -->
+                <div class="col-4 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                            onclick="window.location.href='./admin/day_remove.php'"> 
+                            Supprimer jour
+                    </button>
+                </div>
+            </div>
+
             <!-- Hours -->
             <div class="row mt-2 mb-5">
                 <!-- Modify hours -->
                 <div class="col-4 text-center">
                     <button class="btn bcg_plt_beige plt_golden" 
                             onclick="window.location.href='./admin/hours_modify.php'"> 
-                            Modifier
+                            Modifier heures
                     </button>
                 </div>
 
@@ -82,7 +105,7 @@ session_start();
                 <div class="col-4 text-center">
                     <button class="btn bcg_plt_beige plt_golden" 
                             onclick="window.location.href='./admin/hours_add.php'"> 
-                            Ajouter
+                            Ajouter heures
                     </button>
                 </div>
 
@@ -90,7 +113,7 @@ session_start();
                 <div class="col-4 text-center">
                     <button class="btn bcg_plt_beige plt_golden" 
                             onclick="window.location.href='./admin/hours_remove.php'"> 
-                            Supprimer
+                            Supprimer heures
                     </button>
                 </div>
             </div>
