@@ -34,6 +34,26 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
 <!-- form -->
 <section class="container-fluid mb-5">
     <form action="menu_form_modify_process.php" method="post">
+        <!-- Menu choice -->
+        <div class="row mb-3 text-center">
+            <div class="col-6 text-end">
+                <label for="menu_choice">   Choix du menu </label>
+            </div>
+            <div class="col-6 text-start">
+                <?php
+                // Choice what to modify
+                $result_menu = $mysqli->query("SELECT * FROM menu");
+                ?>
+                <select name="menu_choice" id="menu_choice">
+                <?php while ($row = mysqli_fetch_array($result_menu)) { ?>
+                    <option value="<?php echo $row['title'] ?>"> 
+                        <?php echo $row['title'] ?> 
+                    </option>
+                <?php }; ?>
+                </select>
+            </div>
+        </div>
+
         <!-- Form choice -->
         <div class="row mb-3 text-center">
             <div class="col-6 text-end">

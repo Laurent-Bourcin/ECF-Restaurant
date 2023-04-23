@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>ECF_Restaurant_Admin_Jour_Modifier_Processus</title>
+    <title>ECF_Restaurant_Admin_Horaires_Ajouter_Processus</title>
 </head>
 
 <?php
@@ -25,16 +25,23 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
 ?>
 
 <?php
-// Modify day
-$day_title = $_POST['day_choice'];
-$new_title = $_POST['new_title'];
-if (!mysqli_query($mysqli,"UPDATE days SET 
-    title='$new_title'
-    WHERE title='$day_title'")){
+// verification
+// title
+if(mysqli_num_rows(mysqli_query($mysqli,"SELECT * FROM hours WHERE 
+title='".$_POST['hours_title']."' AND
+day='".$_POST['day_choice']."'"))==1){
+    echo "Ce moment de journée est déjà enregistré.";
+    } else {
+    // All form is ok, so registration
+    if (!mysqli_query($mysqli,"INSERT INTO hours SET 
+    day='".$_POST['day_choice']."',
+    title='".$_POST['hours_title']."',
+    hours='".$_POST['hours_choice']."'")){
         echo "Une erreur s'est produite: ".mysqli_error($mysqli);
     } else {
-        echo "Le jour a été modifié !";
+        echo "L'horaire a été ajoutée !";
     }
+}
 ?>
 
 <!-- Back -->

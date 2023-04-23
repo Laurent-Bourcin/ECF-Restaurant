@@ -34,7 +34,8 @@ if (!mysqli_query($mysqli,"UPDATE form SET
     title='$new_title',
     description='$new_description',
     price='$new_price'
-    WHERE title='$form_title'")){
+    WHERE title='$form_title' AND
+    menu='".$_POST['menu_choice']."'")){
         echo "Une erreur s'est produite: ".mysqli_error($mysqli);
     } else {
         echo "La formule a été modifiée !";

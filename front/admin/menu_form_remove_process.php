@@ -26,7 +26,9 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
 
 <?php
 // Remove form
-if (!mysqli_query($mysqli,"DELETE FROM form WHERE title='".$_POST['form_choice']."'")){
+if (!mysqli_query($mysqli,"DELETE FROM form WHERE 
+    title='".$_POST['form_choice']."'AND
+    menu='".$_POST['menu_choice']."'")){
         echo "Une erreur s'est produite: ".mysqli_error($mysqli);
     } else {
         echo "La formule a été supprimée !";

@@ -27,9 +27,10 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
 <?php
 // verification
 // title
-if(mysqli_num_rows(mysqli_query($mysqli,"SELECT * FROM form WHERE title=
-    '".$_POST['form_title']."'"))==1){
-    echo "Ce plat est déjà enregistré.";
+if(mysqli_num_rows(mysqli_query($mysqli,"SELECT * FROM form WHERE 
+    title='".$_POST['form_title']."' AND
+    menu='".$_POST['menu_choice']."'"))==1){
+    echo "Cette formule est déjà enregistrée.";
     } else {
     // All form is ok, so registration
     if (!mysqli_query($mysqli,"INSERT INTO form SET 

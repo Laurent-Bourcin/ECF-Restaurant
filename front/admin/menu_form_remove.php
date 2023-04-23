@@ -31,10 +31,30 @@ if (isset($_SESSION['name'])) {
 $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
 ?>
 
-<!-- form -->
+<!-- Remove form -->
 <section class="container-fluid mb-5">
     <form action="menu_form_remove_process.php" method="post">
-        <!-- Remove form -->
+        <!-- Choice menu -->
+        <div class="row mb-3 text-center">
+            <div class="col-6 text-end">
+                <label for="menu_choice"> Choix du menu </label>
+            </div>
+            <div class="col-6 text-start">
+                <?php
+                // Choice what to remove
+                $result_menu = $mysqli->query("SELECT * FROM menu");
+                ?>
+                <select name="menu_choice" id="menu_choice">
+                <?php while ($row = mysqli_fetch_array($result_menu)) { ?>
+                    <option value="<?php echo $row['title'] ?>"> 
+                        <?php echo $row['title'] ?> 
+                    </option>
+                <?php }; ?>
+                </select>
+            </div>
+        </div>
+
+        <!-- Choice form -->
         <div class="row mb-3 text-center">
             <div class="col-6 text-end">
                 <label for="form_choice"> Formule à supprimer </label>
@@ -42,10 +62,10 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
             <div class="col-6 text-start">
                 <?php
                 // Choice what to remove
-                $result = $mysqli->query("SELECT * FROM form");
+                $result_form = $mysqli->query("SELECT * FROM form");
                 ?>
                 <select name="form_choice" id="form_choice">
-                <?php while ($row = mysqli_fetch_array($result)) { ?>
+                <?php while ($row = mysqli_fetch_array($result_form)) { ?>
                     <option value="<?php echo $row['title'] ?>"> 
                         <?php echo $row['title']. ' - '. $row['menu'] ?> 
                     </option>

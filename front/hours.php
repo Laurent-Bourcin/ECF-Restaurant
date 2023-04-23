@@ -32,23 +32,34 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
 
     <!-- hours list -->
     <section class="container-fluid mb-5">
-    <!-- Loop for each days -->
     <?php
-    $result_days = $mysqli->query("SELECT * FROM days");
-    while($data = mysqli_fetch_array($result_days)) { 
+    // Search all days in db hours table and put them into a new array
+    $days_db = $mysqli->query("SELECT day FROM hours");
+    $days_exist = [];
+    while($days_array = mysqli_fetch_array($days_db)) {
+        if(!in_array($days_array['day'], $days_exist)){
+            array_push($days_exist, $days_array['day']);
+        }
+    }
+    // Loop for each days in db
+    foreach($days_exist as $day) { 
     ?>
         <div class="row justify-content-center bcg_plt_beige">
             <div class="col-10 text-center bcg_plt_brown my-4">
-                <h2 class="ff_arabic"> <?php echo $data['title'] ?> </h2>
+                <h2 class="ff_arabic"> <?php echo $day ?> </h2>
                 <table class="table text-white">
-                    <tr>
-                        <td> Midi </td>
-                        <td> 12h - 14h30 </td>
-                    </tr>
-                    <tr>
-                        <td> Soir </td>
-                        <td> 19h30 - 22h30 </td>
-                    </tr>
+                <?php
+                // Loop for each hours in db
+                $result_hours = $mysqli->query("SELECT * FROM hours WHERE day='$day'");
+                while($data_hours = mysqli_fetch_array($result_hours)) {
+                        ?>
+                        <tr>
+                            <td class=" col-6 text-center"> <?php echo $data_hours['title'] ?> </td>
+                            <td class="col-6 text-center"> <?php echo $data_hours['hours'] ?> </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
                 </table>
             </div>
         </div>
@@ -64,33 +75,6 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
     if (isset($_SESSION['name'])) {
         if ($_SESSION['type']==='Admin') {
             ?>
-            <!-- Days -->
-            <div class="row mt-2 mb-5">
-                <!-- Modify days -->
-                <div class="col-4 text-center">
-                    <button class="btn bcg_plt_beige plt_golden" 
-                            onclick="window.location.href='./admin/day_modify.php'"> 
-                            Modifier jour
-                    </button>
-                </div>
-
-                <!-- Add hours -->
-                <div class="col-4 text-center">
-                    <button class="btn bcg_plt_beige plt_golden" 
-                            onclick="window.location.href='./admin/day_add.php'"> 
-                            Ajouter jour
-                    </button>
-                </div>
-
-                <!-- Remove hours -->
-                <div class="col-4 text-center">
-                    <button class="btn bcg_plt_beige plt_golden" 
-                            onclick="window.location.href='./admin/day_remove.php'"> 
-                            Supprimer jour
-                    </button>
-                </div>
-            </div>
-
             <!-- Hours -->
             <div class="row mt-2 mb-5">
                 <!-- Modify hours -->
