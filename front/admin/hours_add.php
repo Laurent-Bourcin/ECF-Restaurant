@@ -56,7 +56,7 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
         <!-- Title -->
         <div class="row mb-3 text-center">
             <div class="col-6 text-end">
-                <label for="hours_title"> Moment de la journée (midi, soir ou autre) </label>
+                <label for="hours_title"> Moment de la journée </label>
             </div>
             <div class="col-6 text-start">
                 <select name="hours_title" id="hours_title">

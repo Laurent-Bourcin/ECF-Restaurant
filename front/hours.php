@@ -8,6 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../Back/javascript/script_hours.js"></script> 
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>ECF_Restaurant_Hours</title>
@@ -34,11 +35,12 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
     <section class="container-fluid mb-5">
     <?php
     // Search all days in db hours table and put them into a new array
-    $days_db = $mysqli->query("SELECT day FROM hours");
+    $days_db = $mysqli->query("SELECT day FROM hours ORDER BY field(day, 
+        'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche')");
     $days_exist = [];
     while($days_array = mysqli_fetch_array($days_db)) {
         if(!in_array($days_array['day'], $days_exist)){
-            array_push($days_exist, $days_array['day']);
+                    array_push($days_exist, $days_array['day']);
         }
     }
     // Loop for each days in db
