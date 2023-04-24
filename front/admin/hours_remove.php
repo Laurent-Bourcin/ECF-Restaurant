@@ -74,17 +74,6 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
             <div class="col-6 text-start">
                 <select name="hours_choice" id="hours_choice">
                     <option value='-1'>Choisir une horaire</option>
-                <?php
-                // Choice what to remove
-                /*
-                $result_hours = $mysqli->query("SELECT * FROM hours");
-                ?>
-                <?php while ($row = mysqli_fetch_array($result_hours)) { ?>
-                    <option value="<?php echo $row['hours'] ?>"> 
-                        <?php echo $row['hours'] ?> 
-                    </option>
-                <?php }; 
-                */?>
                 </select>
             </div>
         </div>
