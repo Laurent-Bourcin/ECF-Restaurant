@@ -28,7 +28,7 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
 // Remove hours
 if (!mysqli_query($mysqli,"DELETE FROM hours WHERE 
     day='".$_POST['day_choice']."'AND
-    hours='".$_POST['hours_choice']."'")){
+    hours_start='".$_POST['hours_choice']."'")){
         echo "Une erreur s'est produite: ".mysqli_error($mysqli);
     } else {
         echo "L'horaire a été supprimée !";

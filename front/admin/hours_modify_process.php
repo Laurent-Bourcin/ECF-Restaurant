@@ -28,11 +28,18 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
 // Modify form
 $day = $_POST['day_choice'];
 $hours = $_POST['hours_choice'];
-$new_hours = $_POST['new_hours'];
+$new_hours_start = $_POST['hours_choice_start'];
+$new_minutes_start = $_POST['minutes_choice_start'];
+$hours_start = "$new_hours_start$new_minutes_start";
+
+$new_hours_end = $_POST['hours_choice_end'];
+$new_minutes_end = $_POST['minutes_choice_end'];
+$hours_end = "$new_hours_end$new_minutes_end";
 if (!mysqli_query($mysqli,"UPDATE hours SET 
-    hours='$new_hours'
+    hours_start='$hours_start',
+    hours_end='$hours_end'
     WHERE day='$day' AND
-    hours='$hours'")){
+    hours_start='$hours'")){
         echo "Une erreur s'est produite: ".mysqli_error($mysqli);
     } else {
         echo "L'horaire' a été modifiée !";

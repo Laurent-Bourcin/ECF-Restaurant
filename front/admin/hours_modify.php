@@ -78,13 +78,85 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
             </div>
         </div>
 
-        <!-- New hours -->
+        <!-- FNew Hours start -->
         <div class="row mb-3 text-center">
             <div class="col-6 text-end">
-                <label for="new_hours"> Nouvelle horaire </label>
+                <label for="hours_choice_start"> Nouvelles horaires de début </label>
             </div>
             <div class="col-6 text-start">
-                <input type="text" name="new_hours" id="new_hours">
+                <!-- Select hours -->
+                <select name="hours_choice_start" id="hours_choice_start" required>
+                    <?php
+                    // Loop for 24 hours
+                    for($i=0; $i<25; $i++){
+                    if(strlen($i) == 1) {
+                        // Add a '0' before the hours to 1 at 9
+                        $i = "0".$i;
+                    }
+                    ?>
+                    <option value="<?php echo $i; ?>"> <?php echo $i; ?> </option>
+                    <?php
+                    };
+                    ?>
+                </select>
+                <span> H </span>
+                
+                <!-- Select minutes start-->
+                <select name="minutes_choice_start" id="minutes_choice_start" required>
+                    <?php
+                    // Loop for minutes
+                    for($j=0; $j<60; $j+=10){
+                    if(strlen($j) == 1) {
+                        // Add a '0' before the hours to 1 at 9
+                        $j = "0".$j;
+                    }
+                    ?>
+                    <option value="<?php echo $j; ?>"> <?php echo $j; ?> </option>
+                    <?php
+                    };
+                    ?>
+                </select>
+            </div>
+        </div>
+
+        <!-- New Hours end -->
+        <div class="row mb-3 text-center">
+            <div class="col-6 text-end">
+                <label for="hours_choice_end"> Nouvelles Horaires de fin </label>
+            </div>
+            <div class="col-6 text-start">
+                <!-- Select hours -->
+                <select name="hours_choice_end" id="hours_choice_end" required>
+                    <?php
+                    // Loop for 24 hours
+                    for($i=0; $i<25; $i++){
+                    if(strlen($i) == 1) {
+                        // Add a '0' before the hours to 1 at 9
+                        $i = "0".$i;
+                    }
+                    ?>
+                    <option value="<?php echo $i; ?>"> <?php echo $i; ?> </option>
+                    <?php
+                    };
+                    ?>
+                </select>
+                <span> H </span>
+                
+                <!-- Select minutes end -->
+                <select name="minutes_choice_end" id="minutes_choice_end" required>
+                    <?php
+                    // Loop for minutes
+                    for($j=0; $j<60; $j+=10){
+                    if(strlen($j) == 1) {
+                        // Add a '0' before the hours to 1 at 9
+                        $j = "0".$j;
+                    }
+                    ?>
+                    <option value="<?php echo $j; ?>"> <?php echo $j; ?> </option>
+                    <?php
+                    };
+                    ?>
+                </select>
             </div>
         </div>
 

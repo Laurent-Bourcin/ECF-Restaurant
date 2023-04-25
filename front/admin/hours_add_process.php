@@ -33,10 +33,17 @@ day='".$_POST['day_choice']."'"))==1){
     echo "Ce moment de journée est déjà enregistré.";
     } else {
     // All form is ok, so registration
+    $hours_choice_start = $_POST['hours_choice_start'];
+    $minutes_choice_start = $_POST['minutes_choice_start'];
+    $hours_start = "$hours_choice_start$minutes_choice_start";
+    $hours_choice_end = $_POST['hours_choice_end'];
+    $minutes_choice_end = $_POST['minutes_choice_end'];
+    $hours_end = "$hours_choice_end$minutes_choice_end";
     if (!mysqli_query($mysqli,"INSERT INTO hours SET 
     day='".$_POST['day_choice']."',
     title='".$_POST['hours_title']."',
-    hours='".$_POST['hours_choice']."'")){
+    hours_start='$hours_start',
+    hours_end='$hours_end'")){
         echo "Une erreur s'est produite: ".mysqli_error($mysqli);
     } else {
         echo "L'horaire a été ajoutée !";

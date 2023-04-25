@@ -54,11 +54,20 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
                 // Loop for each hours in db
                 $result_hours = $mysqli->query("SELECT * FROM hours WHERE day='$day'");
                 while($data_hours = mysqli_fetch_array($result_hours)) {
-                        ?>
-                        <tr>
-                            <td class=" col-6 text-center"> <?php echo $data_hours['title'] ?> </td>
-                            <td class="col-6 text-center"> <?php echo $data_hours['hours'] ?> </td>
-                        </tr>
+                    // Configure display of hours
+                    $data_hours_start = $data_hours['hours_start'];
+                    $data_hours_start = substr($data_hours_start, 0, 2). 'h'. 
+                        substr($data_hours_start, 2, 4);
+
+                    $data_hours_end = $data_hours['hours_end'];
+                    $data_hours_end = substr($data_hours_end, 0, 2). 'h'. 
+                    substr($data_hours_end, 2, 4);
+                    ?>
+                    <tr>
+                        <td class=" col-6 text-center"> <?php echo $data_hours['title'] ?> </td>
+                        <td class="col-6 text-center"> <?php 
+                        echo $data_hours_start. '-'. $data_hours_end ?> </td>
+                    </tr>
                     <?php
                     }
                     ?>
