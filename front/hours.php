@@ -116,6 +116,18 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
             <!-- Max seaters -->
             <div class="row mt-2 mb-5">
                 <div class="col-12 text-center">
+                    <?php
+                    // Search in db max seats
+                    $result_seats = $mysqli->query("SELECT seats FROM max_seats");
+                    while($seats = mysqli_fetch_array($result_seats)) {
+                    ?>
+                    <p> Nombre de clients maximal: 
+                        <strong> <?php echo $seats['seats'] ?> </strong>
+                    </p>
+                    <?php
+                    }
+                    ?>
+
                     <button class="btn bcg_plt_beige plt_golden" 
                             onclick="window.location.href='./admin/seaters_modify.php'"> 
                             Modifier nombre de places
