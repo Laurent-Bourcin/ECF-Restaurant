@@ -10,83 +10,65 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../Back/javascript/display_select_moment.js"></script>
     <title>ECF_Restaurant_Reservation</title>
 </head>
 <body>
 
+<?php 
+// Connection at db
+$mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
+?>
+
 <section class="container-fluid">
-    <div class="row">
-        <div class="col-12 text-center mb-3">
-            <h2> Réservation </h2>
+    <form action="reservation-hours.php" method="post">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2> Réservation </h2>
+            </div>
         </div>
-    </div>
 
-    <!-- cutlery number -->
-    <div class="row mb-2 text-center">
-        <div class="col-6">
-            <label for="cutlery_select"> Nombre de couverts </label>
-        </div>
-        <div class="col-6">
-            <select name="cutlery" id="cutlery_select">
-                <option value=""> Sélectionner </option>
-            </select>
-        </div>
-    </div>
+        <!-- date -->
+        <div class="row mb-2 text-center">
+            <div class="col-6 text-end">
+                <label for="date_select"> Date </label>
+            </div>
 
-    <!-- date -->
-    <div class="row mb-2  text-center">
-        <div class="col-6">
-            <label for="date_select"> Date </label>
-        </div>
-        <div class="col-6">
-            <select name="date" id="date_select">
-                <option value=""> Sélectionner </option>
-            </select>
-        </div>
-    </div>
+            <?php
+            $today = date("Y-m-d");
+            ?>
 
-    <!-- hours -->
-    <div class="row mb-2 text-center">
-        <div class="col-6">
-            <label for="hour_select"> Horaire souhaitée </label>
+            <div class="col-6 text-start">
+                <input type="date" name="date_select" id="date_select" min="<?php echo $today ?>" 
+                onchange="displaySelectMoment()" required>
+            </div>
         </div>
-        <div class="col-6">
-            <select name="hour" id="hour_select">
-                <option value=""> Sélectionner </option>
-            </select>
-        </div>
-    </div>
 
-    <!-- allergy -->
-    <div class="row mb-4 mb-xl-5 text-center">
-        <div class="col-6">
-            <label for="alergy_select"> Spécifier des allergies (ctrl si plusieurs) </label>
-        </div>
-        <div class="col-6">
-            <select name="alergy" id="alergy_select">
-                <option value=""> Sélectionner </option>
-            </select>
-        </div>
-    </div>
+        <!-- display select moment -->
+        <section id="display_select_moment" class="text-center">
+        </section>
 
-    <!-- envoyer / annuler -->
-    <div class="row text-center">
-        <div class="col-6">
-            <button 
-                class="btn btn-sm bcg_plt_golden px-md-5" 
-                type="submit" 
-                value ="submit"> 
-                Réserver 
-            </button>
+        <!-- envoyer / annuler -->
+        <div class="row text-center">
+            <div class="col-12">
+                <button 
+                    class="btn btn-sm bcg_plt_golden px-md-5" 
+                    type="submit" 
+                    value ="submit"> 
+                    Continuer
+                </button>
+            </div>
         </div>
-        <div class="col-6">
-            <button 
-                class="btn btn-sm bcg_plt_golden px-md-5" 
-                onclick="window.location.href='./index.php'"> 
-                Annuler 
-            </button>
+    </form>
+        <div class="row text-start">
+            <div class="col-12">
+                <button 
+                    class="btn btn-sm bcg_plt_golden px-md-5" 
+                    onclick="window.location.href='./index.php'"> 
+                    Annuler 
+                </button>
+            </div>
         </div>
-    </div>
 </section>
 
 </body>
