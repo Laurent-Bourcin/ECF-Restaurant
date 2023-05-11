@@ -105,6 +105,35 @@ session_start();
     }
     ?>
 
+    <?php
+    // Initi variable for know if user is admin or not
+    $is_admin = false;
+    ?>
+
+    <?php
+    // Admin buttons
+    if (isset($_SESSION['name'])) {
+        if ($_SESSION['type']==='Admin') {
+    ?>
+            <div class="row mt-2 mb-5">
+                <div class="col-12 text-center">
+                    <button class="btn bcg_plt_beige plt_golden" 
+                        onclick="window.location.href='./admin/reservation_display.php'"> 
+                        Réservations enregistrées 
+                    </button>
+                </div>
+            </div>
+    <?php
+            $is_admin = true;
+        }
+    }
+    ?>
+    </div>
+
+    <?php
+    // No admin buttons
+    if ($is_admin == false) {
+    ?>
     <!-- reservation buton -->
     <div class="row mt-2 mb-5">
         <div class="col-12 text-center">
@@ -113,7 +142,9 @@ session_start();
                     Réserver 
             </button>
         </div>
-    </div>
+        <?php
+        };
+    ?>
 </main>
 
 <!-- footer -->
