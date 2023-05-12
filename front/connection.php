@@ -50,6 +50,8 @@ if(isset($_POST['submit'])){
                     $_SESSION['name'] = $datas[0]['name'];
                     $_SESSION['surname'] = $datas[0]['surname'];
                     $_SESSION['type'] = $datas[0]['type'];
+                    $_SESSION['seats'] = $datas[0]['seats'];
+                    $_SESSION['allergy'] = $datas[0]['allergy'];
                     echo "Vous êtes à présent connecté !";
                     // stop display form
                     $displayForm=0;

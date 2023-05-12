@@ -46,7 +46,9 @@ $_POST['form_create_name'])){
         if(!mysqli_query($mysqli,"INSERT INTO users SET email='".$_POST['form_create_email']."',
          password='".md5($_POST['form_create_pwd'])."', 
          surname='".$_POST['form_create_surname']."',
-         name='".$_POST['form_create_name']."'
+         name='".$_POST['form_create_name']."',
+         seats='".$_POST['form_create_seat']."',
+         allergy='".$_POST['form_create_allergy']."'
          ")){
             echo "Une erreur s'est produite: ".mysqli_error($mysqli);
         } else {

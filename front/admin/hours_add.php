@@ -76,7 +76,7 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
                 <select name="hours_choice_start" id="hours_choice_start" required>
                     <?php
                     // Loop for 24 hours
-                    for($i=0; $i<25; $i++){
+                    for($i=10; $i<14; $i++){
                     if(strlen($i) == 1) {
                         // Add a '0' before the hours to 1 at 9
                         $i = "0".$i;
@@ -117,7 +117,7 @@ $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
                 <select name="hours_choice_end" id="hours_choice_end" required>
                     <?php
                     // Loop for 24 hours
-                    for($i=0; $i<25; $i++){
+                    for($i=18; $i<21; $i++){
                     if(strlen($i) == 1) {
                         // Add a '0' before the hours to 1 at 9
                         $i = "0".$i;

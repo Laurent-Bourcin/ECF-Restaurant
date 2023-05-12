@@ -10,7 +10,14 @@
 </head>
 <body>
 
-<?php require('../Back/config.php'); ?> 
+<?php 
+require('../Back/config.php'); 
+// Connexion at db
+require '../Back/connexion_at_db.php';
+// Search max seats
+require '../Back/max_seats.php';
+
+?> 
 
 <?php if($displayForm==1){
     ?>
@@ -67,11 +74,17 @@
             <!-- Number of seats -->
             <div class="row text-center mb-3">
                 <div class="col-4 text-end">
-                    <label for="form_create_seat"> Couverts </label>
+                    <label for="form_create_seat"> Couverts (optionnel) </label>
                 </div>
                 <div class="col-8">
                     <select name="form_create_seat" id="form_create_seat">
                         <option value=""> Sélectionner </option>
+                        <?php
+                        // loop for seats from 1 to max_seats
+                        for($i=1; $i<$max_seats+1; $i++){ 
+                            echo '<option value='. $i. '> '. $i. '</option>';
+                        };
+                        ?>
                     </select>
                 </div>
             </div>
@@ -79,12 +92,10 @@
             <!-- Allergy -->
             <div class="row text-center mb-3">
                 <div class="col-4 text-end">
-                    <label for="form_create_allergy"> Allergies (ctrl si plusieurs) </label>
+                    <label for="form_create_allergy"> Allergies (optionnel) </label>
                 </div>
                 <div class="col-8">
-                    <select name="form_create_allergy" id="form_create_allergy">
-                        <option value=""> Sélectionner </option>
-                    </select>
+                    <textarea name="form_create_allergy" id="form_create_allergy"></textarea>
                 </div>
             </div>
 

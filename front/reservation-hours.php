@@ -88,15 +88,23 @@ require "../Back/hours_diff_start_end.php";
                     case 'Midi':
                         seatsReservedLunch($date_select, $mysqli, $seats_reserved_lunch);
                         $seats_available = $max_seats - $seats_reserved_lunch;
-                        for($i=1; $i<$seats_available+1; $i++){ 
+                        for($i=1; $i<$seats_available+1; $i++){
+                            if($i == $_SESSION['seats']){
+                                echo '<option value='. $i. ' selected>'. $i. '</option>';
+                            } else {
                             echo '<option value='. $i. '> '. $i. '</option>';
+                            }
                         };
                         break;
                     case 'Soir':
                         seatsReservedLunch($date_select, $mysqli, $seats_reserved_dinner);
                         $seats_available = $max_seats - $seats_reserved_dinner;
-                        for($i=1; $i<$seats_available+1; $i++){ 
+                        for($i=1; $i<$seats_available+1; $i++){
+                            if($i == $_SESSION['seats']){
+                                echo '<option value='. $i. ' selected>'. $i. '</option>';
+                            } else { 
                             echo '<option value='. $i. '> '. $i. '</option>';
+                            }
                         };
                         break;
                 };
@@ -111,7 +119,11 @@ require "../Back/hours_diff_start_end.php";
                 <label for="allergy_input"> Allergies (optionnel) </label>
             </div>
             <div class="col-6 text-start">
-                <textarea name="allergy_input" id="allergy_input"></textarea>
+                <textarea name="allergy_input" id="allergy_input"><?php
+                    if(isset($_SESSION['allergy'])){
+                        echo $_SESSION['allergy'];
+                    } ?>
+                </textarea>
             </div>
         </div>
 
