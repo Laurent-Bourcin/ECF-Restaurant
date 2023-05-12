@@ -61,7 +61,12 @@ require "../Back/hours_diff_start_end.php";
                 <label for="name_input"> Prénom </label>
             </div>
             <div class="col-6 text-start">
-                <input type="text" name="name_input" id="name_input" required>
+                <input type="text" name="name_input" id="name_input" 
+                <?php
+                if(isset($_SESSION['name'])){
+                    echo 'value="'. $_SESSION['name']. '"';
+                } ?>
+                required>
             </div>
         </div>
 
@@ -71,7 +76,12 @@ require "../Back/hours_diff_start_end.php";
                 <label for="surname_input"> Nom </label>
             </div>
             <div class="col-6 text-start">
-                <input type="text" name="surname_input" id="surname_input" required>
+                <input type="text" name="surname_input" id="surname_input" 
+                <?php
+                if(isset($_SESSION['surname'])){
+                    echo 'value="'. $_SESSION['surname']. '"';
+                } ?>
+                required>
             </div>
         </div>
 
