@@ -5,16 +5,6 @@ require "../Back/footer_display_hours.php";
 <footer class="container-fluid">    
 
 <?php
-/*
-
-            <p> <?php echo $footer_open ?> </p>
-            <p> <?php displayHours() ?> </p>  
-        </div>
-    </div>
-*/
-?>
-
-<?php
 // If today restaurant is open
 $footer_open = '';
 $footer_title = [];

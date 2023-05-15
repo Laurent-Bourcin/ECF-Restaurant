@@ -20,7 +20,7 @@ session_start();
 
 <?php 
 // Connection at db
-$mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
+require "../Back/connexion_at_db.php"
 ?>
 
 <main class="container-fluid">
