@@ -15,7 +15,7 @@ session_start();
 <body>
 
 <!-- header -->
-<?php include 'header.php'; ?> 
+<?php include './header.php'; ?> 
 
 <main class="container-fluid mt-5">
     <!-- carousel -->
@@ -148,7 +148,7 @@ session_start();
 </main>
 
 <!-- footer -->
-<?php include 'footer.php'; ?>
+<?php include './footer.php'; ?>
 
 </body>
 <script src="../Bootstrap/js/bootstrap.bundle.js"></script>
