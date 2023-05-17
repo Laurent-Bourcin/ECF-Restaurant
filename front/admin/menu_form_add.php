@@ -21,7 +21,7 @@ if (isset($_SESSION['name'])) {
 
 <?php 
 // Connection at db
-require "./Back/connexion_at_db.php"
+require "../../Back/connexion_at_db.php";
 ?>
 
 <main class="container-fluid">
