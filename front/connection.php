@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
             $pwd = htmlentities($_POST['form_connect_pwd'], ENT_QUOTES, "UTF-8");
 
             // Connection at db
-            $mysqli = mysqli_connect("localhost:3307", "root", "", "restaurant");
+            require "../Back/connexion_at_db.php";
             if(!$mysqli){
                 echo "Erreur de connexion à la base de données.";
             } else {
