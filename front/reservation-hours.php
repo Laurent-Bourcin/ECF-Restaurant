@@ -146,6 +146,7 @@ require "../Back/hours_diff_start_end.php";
                 <select name="hours_input" id="hours_input" required>
                     <option value=""> Sélectionner </option>
                     <?php
+                    $hours_end = $hours_end - 100;
                     diffStartEnd($hours_start, $hours_end);
                     for($i=0; $i<$diff-1; $i++){
                         $substr_start_minutes += 15;

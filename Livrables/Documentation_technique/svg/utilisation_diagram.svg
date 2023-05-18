@@ -16,7 +16,7 @@
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="utilisation_diagram.svg"
-   inkscape:export-filename="C:\Users\User\formation_evaluations\ECF-Restaurant\Livrables\utilisation_diagram.png"
+   inkscape:export-filename="C:\xampp\htdocs\ECF-Restaurant\Livrables\Documentation_technique\png\utilisation_diagram.png"
    inkscape:export-xdpi="101"
    inkscape:export-ydpi="101">
   <defs
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="340.84651"
+     inkscape:cx="70.132224"
      inkscape:cy="362.31144"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -90,12 +90,12 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="7.7790675"
-       y="146.94345"
+       y="268.2738"
        id="text847"><tspan
          sodipodi:role="line"
          id="tspan845"
          x="7.7790675"
-         y="146.94345"
+         y="268.2738"
          style="stroke-width:0.26458332px">Admin</tspan></text>
     <g
        id="g843-5"
@@ -172,12 +172,12 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="3.3176696"
-       y="264.13422"
+       y="145.82767"
        id="text915"><tspan
          sodipodi:role="line"
          id="tspan913"
          x="3.3176696"
-         y="264.13422"
+         y="145.82767"
          style="stroke-width:0.26458332px">customer</tspan></text>
     <ellipse
        style="opacity:1;fill:#ab9942;fill-opacity:0.50196078;fill-rule:evenodd;stroke:#000000;stroke-width:1.44491255;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
