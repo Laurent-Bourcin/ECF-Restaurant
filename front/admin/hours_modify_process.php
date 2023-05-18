@@ -42,7 +42,7 @@ if (!mysqli_query($mysqli,"UPDATE hours SET
     hours_start='$hours'")){
         echo "Une erreur s'est produite: ".mysqli_error($mysqli);
     } else {
-        echo "L'horaire' a été modifiée !";
+        echo "L'horaire a été modifiée !";
     }
 ?>
 

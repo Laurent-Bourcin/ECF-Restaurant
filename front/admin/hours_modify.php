@@ -160,10 +160,10 @@ require "../../Back/connexion_at_db.php";
             </div>
         </div>
 
-        <!-- Remove button -->
+        <!-- Modify button -->
         <div class="row mb-3 text-center">
             <div class="col-12 text-center">
-                <button type="submit" name="modify" value="modify"> Modify </button>
+                <button type="submit" name="modify" value="modify"> Modifier </button>
             </div>
         </div>
     </form>
