@@ -26,11 +26,11 @@ $day_french = '';
 $dateChoice = $_POST['date_select'];
 require "../Back/day_French.php";
 // know hours start
-require "../Back/Hours_start.php";
+require "../Back/hours_start.php";
 $moment_select = $_POST['moment_select'];
 HoursStart ($day_french, $mysqli, $moment_select);
 // know hours end
-require "../Back/Hours_end.php";
+require "../Back/hours_end.php";
 HoursEnd ($day_french, $mysqli, $moment_select);
 // know diff between start hours and start end
 require "../Back/hours_diff_start_end.php";

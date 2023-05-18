@@ -1,4 +1,7 @@
 <?php
+// Connection at db
+require "connexion_at_db.php";
+
 $hours_start_array = [];
 $hours_start = '';
 function HoursStart ($day_french, $mysqli, $moment){
